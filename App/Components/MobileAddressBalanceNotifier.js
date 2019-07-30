@@ -25,20 +25,20 @@ class MobileAddressBalanceNotifier {
 
         this.socketClient.on('connect', () => {
             logger.info('connect socketClient');
-            this.subscribeRemoteQtumRoom();
+            this.subscribeRemoteTripiRoom();
         });
 
         this.socketClient.on('disconnect', () => {
             logger.info('disconnect socketClient');
         });
 
-        this.subscribeToQtumBlock();
+        this.subscribeToTripiBlock();
 
     }
 
-    subscribeToQtumBlock() {
+    subscribeToTripiBlock() {
 
-        this.socketClient.on('qtum/block', (data) => {
+        this.socketClient.on('tripi/block', (data) => {
 
             if (data && data.transactions) {
 
@@ -221,8 +221,8 @@ class MobileAddressBalanceNotifier {
 
     }
 
-    subscribeRemoteQtumRoom() {
-        this.socketClient.emit('subscribe', 'qtum');
+    subscribeRemoteTripiRoom() {
+        this.socketClient.emit('subscribe', 'tripi');
     }
 
     /**

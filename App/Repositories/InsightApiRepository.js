@@ -258,7 +258,7 @@ class InsightApiRepository {
         });
     }
 
-    static fetchQrc20Transfers(contractAddress, options, cb) {
+    static fetchTrc20Transfers(contractAddress, options, cb) {
 
         let queryParamsString = queryString.stringify(options, {arrayFormat: 'bracket'});
 
@@ -272,7 +272,7 @@ class InsightApiRepository {
             }
 
             if (body && _.isString(body)) {
-                console.log('Error fetchQrc20Transfers: ', body);
+                console.log('Error fetchTrc20Transfers: ', body);
                 return cb('Not Found')
             }
 

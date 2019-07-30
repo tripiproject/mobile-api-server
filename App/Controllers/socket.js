@@ -10,7 +10,7 @@ let InsightApiRepository = require("../Repositories/InsightApiRepository"),
 const Address = require('../Components/Address');
 const _ = require('lodash');
 const TokenBalanceChangeEvents = require('../Components/SocketEvents/TokenBalanceChangeEvents');
-const QtumRoomEvents = require('../Components/SocketEvents/QtumRoomEvents');
+const TripiRoomEvents = require('../Components/SocketEvents/TripiRoomEvents');
 const TokenContract = require('../Components/TokenContract');
 const ContractPurchaseEvents = require('../Components/SocketEvents/ContractPurchaseEvents');
 const contractPurchaseWatcherInstance = require("../Components/ContractPurchaseWatcherInstance");
@@ -51,7 +51,7 @@ class SocketController {
 
     initSocketEvents() {
         this.events.tokenBalanceEvents = new TokenBalanceChangeEvents(this.socket, this.tokenContract);
-        this.events.qtumRoomEvents = new QtumRoomEvents(this.socket, this.socketClient);
+        this.events.tripiRoomEvents = new TripiRoomEvents(this.socket, this.socketClient);
         this.events.contractPurchaseEvents = new ContractPurchaseEvents(contractPurchaseWatcherInstance);
     }
 
@@ -116,7 +116,7 @@ class SocketController {
 
         socket.on('disconnect', () => {
 
-            this.events.qtumRoomEvents.unsubscribeAddress(socket, null);
+            this.events.tripiRoomEvents.unsubscribeAddress(socket, null);
             this.events.tokenBalanceEvents.unsubscribeAddress(socket, null);
 
             logger.info('User disconnected', remoteAddress);
@@ -161,7 +161,7 @@ class SocketController {
             return false;
         }
 
-        this.events.qtumRoomEvents.subscribeAddress(socket, addresses);
+        this.events.tripiRoomEvents.subscribeAddress(socket, addresses);
 
         if (options.notificationToken) {
             this.mobileAddressBalanceNotifier.subscribeAddress(addresses, options);
@@ -236,7 +236,7 @@ class SocketController {
             return false;
         }
 
-        this.events.qtumRoomEvents.unsubscribeAddress(socket, addresses);
+        this.events.tripiRoomEvents.unsubscribeAddress(socket, addresses);
 
         if (options.notificationToken) {
             this.mobileAddressBalanceNotifier.unsubscribeAddress(options.notificationToken, addresses);

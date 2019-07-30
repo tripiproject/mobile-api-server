@@ -1,13 +1,13 @@
-let qtumcore = require('qtumcore-lib');
-let _ = qtumcore.deps._;
-let PrivateKey = qtumcore.PrivateKey;
-let PublicKey = qtumcore.PublicKey;
-let Address = qtumcore.Address;
-let BufferWriter = qtumcore.encoding.BufferWriter;
-let ECDSA = qtumcore.crypto.ECDSA;
-let Signature = qtumcore.crypto.Signature;
-let sha256sha256 = qtumcore.crypto.Hash.sha256sha256;
-let $ = qtumcore.util.preconditions;
+let tripicore = require('tripicore-lib');
+let _ = tripicore.deps._;
+let PrivateKey = tripicore.PrivateKey;
+let PublicKey = tripicore.PublicKey;
+let Address = tripicore.Address;
+let BufferWriter = tripicore.encoding.BufferWriter;
+let ECDSA = tripicore.crypto.ECDSA;
+let Signature = tripicore.crypto.Signature;
+let sha256sha256 = tripicore.crypto.Hash.sha256sha256;
+let $ = tripicore.util.preconditions;
 
 class MessageCryptographer {
 

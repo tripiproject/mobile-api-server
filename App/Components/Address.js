@@ -1,4 +1,4 @@
-const coreLib = require('qtumcore-lib');
+const coreLib = require('tripicore-lib');
 
 class Address {
 

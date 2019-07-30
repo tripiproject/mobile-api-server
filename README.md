@@ -16,7 +16,7 @@
     * [Get blockchain info](#get-blockchain-info)
     * [Get dgp info](#get-dgp-info)
     * [Estimate Fee Per Kb](#estimate-fee-per-kb)
-    * [QRC20 Transfers](#qrc20-transfers)
+    * [TRC20 Transfers](#trc20-transfers)
     * [Does Contract exist?](#does-contract-exist)
     
 * [Web Socket API](#web-socket-api)
@@ -180,23 +180,23 @@ response: Object | null
     "block_height": 31111|-1,
     "block_hash": "b0589be37f4e24bffea77bfc87f5bbd6f9a90c629306f7c3340c7c52a982e592"|null,
     "tx_hash": "25fb98d4849f837d71f331eec74f71e9286e6a0b85d27218f7236dc69d8c990f",
-    "amount": 5, //qtum,
+    "amount": 5, //tripi,
     "contract_has_been_created": true, //optional
     "contract_has_been_deleted": true, //optional
     "vout": [
         {
-            "value": "2.00000000", //qtum
+            "value": "2.00000000", //tripi
             "address": "mopkoZaJGQE32h8WME5F2oBk8hvD1CVdP7"
             
         },
         {
-            "value": "2.99995400", //qtum
+            "value": "2.99995400", //tripi
             "address": "mk5aX8HDEpSWF2P2dtdSN9aiAC7AHdzHEa"
         }
     ],
     "vin": [
         {
-            value: "5", //qtum
+            value: "5", //tripi
             address: "mopkoZaJGQE32h8WME5F2oBk8hvD1CVdP7"
         }
     ]
@@ -256,21 +256,21 @@ response
              "block_height": 23701|-1,
              "block_hash": "ea22d5650f6edf352790372c27edba05c4b3870f181ad245a2f9b63cfef39589"|null,
              "tx_hash": "79d78d6f54037045cd091c7ae1a3a84c07cd7a9c02190b26092e62b77feaea80",
-             "amount": 1.875, //qtum
+             "amount": 1.875, //tripi
              "contract_has_been_created": true,
              "vout": [
                  {
-                     "value": "1", //qtum
+                     "value": "1", //tripi
                      "address": "mr8Mezn8p7CmHvPBbfieSxfeNtHiG7AwfQ"
                  },
                  {
-                     "value": "0.874", //qtum
+                     "value": "0.874", //tripi
                      "address": "mvYtoXgd5NCWNfPmyH8AYDyzY6kqmZ5Jt3"
                  }
              ],
              "vin": [
                  {
-                     value: "1.875", //qtum
+                     value: "1.875", //tripi
                      address: "mvYtoXgd5NCWNfPmyH8AYDyzY6kqmZ5Jt3"
                  }
              ]
@@ -298,21 +298,21 @@ response
              "block_height": 23701|-1,
              "block_hash": "ea22d5650f6edf352790372c27edba05c4b3870f181ad245a2f9b63cfef39589"|null,
              "tx_hash": "79d78d6f54037045cd091c7ae1a3a84c07cd7a9c02190b26092e62b77feaea80",
-             "amount": 1.875, //qtum
+             "amount": 1.875, //tripi
              "contract_has_been_created": true,
              "vout": [
                  {
-                     "value": "1", //qtum
+                     "value": "1", //tripi
                      "address": "mr8Mezn8p7CmHvPBbfieSxfeNtHiG7AwfQ"
                  },
                  {
-                     "value": "0.874", //qtum
+                     "value": "0.874", //tripi
                      "address": "mvYtoXgd5NCWNfPmyH8AYDyzY6kqmZ5Jt3"
                  }
              ],
              "vin": [
                  {
-                     value: "1.875", //qtum
+                     value: "1.875", //tripi
                      address: "mvYtoXgd5NCWNfPmyH8AYDyzY6kqmZ5Jt3"
                  }
              ]
@@ -335,7 +335,7 @@ response
     tx_hash: "c038b71aaa6fa6a1fab239fa880483ecf36d664553456ad3985b522b1612f7e5",
     vout: 1,
     txout_scriptPubKey: "76a914b739980629d47e0de6e3fac7513cff7fe36e6fff88ac",
-    amount: 1, //qtum
+    amount: 1, //tripi
     block_height: 100000000|-1,
     pubkey_hash: String,
     is_stake: Boolean,
@@ -356,7 +356,7 @@ response
     tx_hash: "c038b71aaa6fa6a1fab239fa880483ecf36d664553456ad3985b522b1612f7e5",
     vout: 1,
     txout_scriptPubKey: "76a914b739980629d47e0de6e3fac7513cff7fe36e6fff88ac",
-    amount: 1, //qtum
+    amount: 1, //tripi
     block_height: 100000000|-1,
     pubkey_hash: String,
     is_stake: Boolean,
@@ -374,11 +374,11 @@ response
 [{
 	"id": 287,
 	"date": "2017-07-18T09:36:13.717Z",
-	"link": "https://qtum.org/qa-about-qtum-project/",
-	"title": "Q&#038;A About Qtum Project",
+	"link": "https://tripi.org/qa-about-tripi-project/",
+	"title": "Q&#038;A About Tripi Project",
 	"body": "These questions were asked in Slack Channel...",
-	"short": "These questions were asked in Qtum...",
-	"image": "https://qtum.org/wp-content/uploads/2017/01/Telephone-Game.png"
+	"short": "These questions were asked in Tripi...",
+	"image": "https://tripi.org/wp-content/uploads/2017/01/Telephone-Game.png"
 }]
 ```
 
@@ -440,11 +440,11 @@ Response:
 ```
 
 
-## QRC20 Transfers
+## TRC20 Transfers
 
 `GET`
 
-/qrc20/{:qrc20ContractAddress}/transfers?limit=20&offset=0&addresses[]=QMo91KVCAW9BMAeHRDYz5ib94N7pGTMmQd
+/trc20/{:trc20ContractAddress}/transfers?limit=20&offset=0&addresses[]=QMo91KVCAW9BMAeHRDYz5ib94N7pGTMmQd
 
 Response:
 ```
@@ -636,22 +636,22 @@ Sample output:
     "block_height": 23701|-1,
     "block_hash": "ea22d5650f6edf352790372c27edba05c4b3870f181ad245a2f9b63cfef39589"|null,
     "tx_hash": "79d78d6f54037045cd091c7ae1a3a84c07cd7a9c02190b26092e62b77feaea80",
-    "amount": 1.875, //qtum
+    "amount": 1.875, //tripi
     "contract_has_been_created": true, //optional
     "contract_has_been_deleted": true, //optional
     "vout": [
         {
-            "value": "1", //qtum
+            "value": "1", //tripi
             "address": "mr8Mezn8p7CmHvPBbfieSxfeNtHiG7AwfQ"
         },
         {
-            "value": "0.874", //qtum
+            "value": "0.874", //tripi
             "address": "mvYtoXgd5NCWNfPmyH8AYDyzY6kqmZ5Jt3"
         }
     ],
     "vin": [
         {
-            value: "1.875", //qtum
+            value: "1.875", //tripi
             address: "mvYtoXgd5NCWNfPmyH8AYDyzY6kqmZ5Jt3"
         }
     ]
@@ -698,8 +698,8 @@ Response:
 [{
     "id": "8a9d8f98as989s8dfak9a9k",
     "name": "Contract name",
-    "type": "Crowdsale", // QRC20 Token || Crowdsale || Smart Contract
-    "price": "4.3432344", // cost in QTUM
+    "type": "Crowdsale", // TRC20 Token || Crowdsale || Smart Contract
+    "price": "4.3432344", // cost in TRIPI
     "count_buy": 3,
     "count_downloads": 323,
     "created_at": "2017-07-18T09:36:13.717Z"
@@ -719,8 +719,8 @@ Response:
 [{
     "id": "8a9d8f98as989s8dfak9a9k",
     "name": "Contract name",
-    "type": "Crowdsale", // QRC20 Token || Crowdsale || Smart Contract
-    "price": "4.3432344", // cost in QTUM
+    "type": "Crowdsale", // TRC20 Token || Crowdsale || Smart Contract
+    "price": "4.3432344", // cost in TRIPI
     "count_buy": 3,
     "count_downloads": 323,
     "created_at": "2017-07-18T09:37:06.193Z"
@@ -739,8 +739,8 @@ Response:
 [{
     "id": "8a9d8f98as989s8dfak9a9k",
     "name": "Contract name",
-    "type": "Crowdsale", // QRC20 Token || Crowdsale || Smart Contract
-    "price": "4.3432344", // cost in QTUM
+    "type": "Crowdsale", // TRC20 Token || Crowdsale || Smart Contract
+    "price": "4.3432344", // cost in TRIPI
     "count_buy": 3,
     "count_downloads": 323,
     "created_at": "2017-07-18T09:37:06.193Z",
@@ -769,8 +769,8 @@ Response:
     "completed_on": "1.0.5",
     "with_sourse_code": true,
     "publisher_address": "1Hz96kJKF2HLPGY15JWLB5m9qGNxvt8tHJ",    
-    "type": "Crowdsale", // QRC20 Token || Crowdsale || Smart Contract
-    "price": "4.3432344", // cost in QTUM
+    "type": "Crowdsale", // TRC20 Token || Crowdsale || Smart Contract
+    "price": "4.3432344", // cost in TRIPI
     "count_buy": 3,
     "count_downloads": 323,
     "created_at": "2017-07-18T09:37:06.193Z"
